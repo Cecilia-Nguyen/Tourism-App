@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:padding="10dp"
+    android:orientation="vertical"
+    >
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        ></FrameLayout>
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_top_destinations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Top Destinations"
+            android:textAllCaps="true"
+            android:textColor="#0E0E0E"
+            android:textSize="25sp"
+            android:textStyle="bold"/>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <Button
+                android:id="@+id/btn_previous"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/circle_btn"
+                android:gravity="center"
+                android:text="&lt;"
+                android:textColor="#070707"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_top_destinations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal"
+                android:layout_marginTop="10dp"
+                android:scrollbarSize="0dp"
+                />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/circle_btn"
+                android:text="&gt;"
+                android:textColor="#070707"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_places_to_go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Places to go"
+            android:layout_gravity="left"
+            android:textColor="#0E0E0E"
+            android:textAllCaps="true"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_places_to_go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:scrollbarSize="0dp"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
